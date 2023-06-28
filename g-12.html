@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="recponsive.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+
+        /* html scroling */
+        html{
+            scroll-behavior: smooth;
+        }
+
+        
+        
+        /* navbar ----*/
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(6, 6, 6, 0.6);
+            position: sticky;
+            top: 0px;
+
+
+        }
+
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            margin: 20px 0px;
+
+        }
+
+
+        .navbar ul li {
+            font-family: sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 25px;
+        }
+
+
+        .navbar ul li a:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0px 0px 10px white;
+        }
+
+
+
+        /* home section -----*/
+        #home {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(6, 6, 6, 0.434);
+            height: 840px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+
+
+        #home::before {
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background: url('./pic.2.jpg') no-repeat center center/cover;
+            width: 100%;
+            height: 900px;
+            opacity: .8;
+            z-index: -1;
+
+
+        }
+
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            /* border: 2px solid red ; */
+            align-items: center;
+            position: absolute;
+            top: 30%;
+            right: 10%;
+
+
+        }
+
+        .headings {
+            font-family: serif;
+            font-size: 3rem;
+            text-align: center;
+            margin: 40px 0px;
+        }
+
+
+        .btn {
+            padding: 10px 35px;
+            background: transparent;
+            border: 1px solid white;
+            color: white;
+            outline: none;
+            font-size: 20px;
+            transition: .6s ease;
+
+
+
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0px 0px 5px white, 0px 0px 10px white, 0 0 15px white;
+            cursor: pointer;
+
+        }
+
+        /* section about ----*/
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 20px;
+            margin-bottom: 50px;
+        }
+
+        #pic {
+            display: flex;
+
+        }
+
+        #pic img {
+            display: flex;
+            width: 575px;
+            height: 400px;
+        }
+
+        #intro {
+            display: flex;
+            flex-direction: column;
+            align-items: justify;
+            padding: 10px;
+
+        }
+
+        #intro h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+
+        }
+
+        
+        /* section portolio ---*/
+        #portolio {
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            align-items: center;
+            padding: 20px;
+
+        }
+
+        .gellery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            box-sizing: border-box;
+
+        }
+
+        .gellery img {
+            width: 360px;
+            height: 240px;
+            margin: 10px;
+        }
+
+        
+        /* section services -----*/
+        #services {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+
+        .row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+        }
+
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            width: 350px;
+            height: 450px;
+            border: 1px solid black;
+            margin: 10px;
+            align-items: center;
+            text-align: justify;
+            padding: 10px;
+            border-radius: 15px;
+            background: linear-gradient(to top, red 50%, white 50%);
+            background-size: 100% 200%;
+            transition: all .8s;
+        }
+
+
+        .box:hover {
+            background-position: left bottom;
+            color: white;
+            border: none;
+            box-shadow: 0 0 20px rgb(255, 45, 45);
+        }
+
+
+        .box img{
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            padding: 10px;
+        }
+
+
+        /* contect section ----*/
+        #contect{
+            display: flex;
+            flex-direction: column;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0px;
+        }
+
+
+        .input{
+            width: 30%;
+            padding: 10px;
+            margin: 15px;
+            border: none;
+            outline: none;
+        }
+
+
+        #msg{
+            width: 20%;
+            padding: 10px;
+            margin: 15px;
+            border: none;
+            outline: none;
+
+        }
+
+
+        #send{
+            padding: 10px;
+            width: 10%;
+            margin: 40px;
+            border: none;
+            outline: none;
+            text-align: center;
+            font-size: 16px;
+         
+        }
+
+
+        #send:hover{
+            cursor: pointer;
+            box-shadow: 0 0 10px white;
+            font-weight: bold;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+
+    
+    <!-- navbar -->
+    <nav class="navbar">
+        <ul>
+            <li> <a href="#home">Home</a></li>
+            <li> <a href="#about">About me</a></li>
+            <li> <a href="#portolio">Portolio</a></li>
+            <li> <a href="#services">Services</a></li>
+            <li> <a href="#contect">Contect</a></li>
+        </ul>
+    </nav>
+
+    
+    <!-- home section -->
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">I am <br> Gulshan Sharma</h1>
+            <button class="btn">Here Me</button>
+        </div>
+    </section>
+
+    
+    <!-- section about -->
+    <section id="about">
+        <h1 class="headings">ABOUT ME</h1>
+        <div id="pic">
+            <img src="path.jpg" alt="">
+            <div id="intro">
+                <h2>PARAGRAPH</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque iure, aliquid excepturi quasi
+                    rerum, dolore harum perspiciatis non ullam quas fugit quia perferendis tempore, voluptatibus ipsa?
+                    Quas quae laborum sunt repellat, quo, eaque, eum optio necessitatibus accusantium nostrum suscipit
+                    perferendis nulla deserunt! Rem veniam ducimus eaque ex est nesciunt illum molestiae voluptatum
+                    dolorem hic? Eius aliquid, iure quae harum consequuntur mollitia sequi. Dolorem dicta vero deleniti
+                    optio ad repellendus aliquid alias itaque tempore minus fugiat mollitia vitae perferendis nostrum
+                    molestias placeat dolor tenetur temporibus, autem earum praesentium dolores! Quaerat, itaque.
+                    Maiores quidem dicta consequatur numquam, ratione, repellat rem error sit a mollitia nesciunt.
+                    Beatae nulla porro cupiditate ratione rerum, eius voluptatibus fuga sint inventore animi reiciendis
+                    adipisci repellat provident quasi. Aperiam quam quidem esse accusantium molestias saepe, excepturi
+                    tempore porro doloribus a distinctio eveniet! Asperiores, in sit animi sequi quam quia libero
+                    tenetur, nemo inventore rem odio incidunt harum quod. Veniam earum et impedit vel iusto
+                    reprehenderit, deserunt sit sunt fuga tempora, excepturi harum nisi pariatur saepe eveniet eius?
+                    Maiores molestiae illo deserunt quidem aliquam, quae cumque nobis quibusdam esse adipisci iure,
+                    sunt, aliquid saepe exercitationem eum quo alias veritatis molestias enim dolore vitae tempore fuga.
+                    Ratione, repellat in. </p>
+            </div>
+        </div>
+
+    </section>
+
+    
+    <!-- section portfolio -->
+    <section id="portolio">
+        <h2 class="headings">PORTOLIO</h2>
+        <div class="gellery">
+            <img src="path-1.jpg" alt="">
+            <img src="path-2.jpg" alt="">
+            <img src="path-3.jpg" alt="">
+            <img src="path-4.jpg" alt="">
+            <img src="path-5.png" alt="">
+            <img src="path-6.jpg" alt="">
+
+
+
+        </div>
+    </section>
+
+    
+    <!-- services section -->
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+            <div class="box">
+                <img src="html.1.jpg" alt="">
+                <h1 class="headings">HTML <br> Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id tenetur consequuntur modi nostrum
+                    neque et in, optio magnam! Maiores eum ea a possimus corrupti perferendis labore aperiam sunt
+                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eaque non, expedita id
+                    natus facere atque. Esse quos illum quia! </p>
+            </div>
+
+            <div class="box">
+                <img src="css.image.jpg" alt="">
+                <h1 class="headings">CSS <br> Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id tenetur consequuntur modi nostrum
+                    neque et in, optio magnam! Maiores eum ea a possimus corrupti perferendis labore aperiam sunt
+                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eaque non, expedita id
+                    natus facere atque. Esse quos illum quia! </p>
+            </div>
+
+            <div class="box">
+                <img src="java.image.jpg" alt="">
+                <h1 class="headings">JavaScript Design</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias id tenetur consequuntur modi nostrum
+                    neque et in, optio magnam! Maiores eum ea a possimus corrupti perferendis labore aperiam sunt
+                    laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia eaque non, expedita id
+                    natus facere atque. Esse quos illum quia! </p>
+            </div>
+        </div>
+
+    </section>
+
+    
+    <!-- contect section -->
+    <section id="contect">
+        <h1 class="headings">CONTECT</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="enter your name">
+            <input type="email" name="email" class="input" placeholder="enter your email">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="enter your massage"></textarea>
+            <input type="submi" value="send" id="send">
+        </form>
+    </section>
+
+</body>
+
+</html>
+
